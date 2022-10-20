@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>         
+  <meta charset="UTF-8">              
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  <link href="image/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+  
+  <script src="script/jquery.js"></script>
+  <script src="script/jquery_ui.js"></script>     
+  <script src="script/Chart.bundle.min.js"></script>  
+  <script src="script/funkce.js"></script>
+  
+  <title>Řazení prohlížečů</title>      
+</head>
+<body class="w3-content">
+<header class="w3-container">                                   
+  <a href="https://pracesdaty.zcu.cz" ><img src="image/logo.png" alt="logo" /></a>
+  <p><strong>Kategorie:</strong> Filtrujeme, třídíme a řadíme data</p>
+  <p><strong>Název příkladu:</strong> Řazení prohlížečů</p>
+  <noscript>
+    <div class="w3-panel no-js"><strong>Pozor!</strong> Ve svém prohlížeči máte vypnutý JavaScript. Bez jeho zapnutí stránky nebudou fungovat korektně.</div>
+  </noscript>
+</header>
+<main class="w3-container">
+<div class="w3-bar">
+  <button class="w3-bar-item w3-button active" onclick="zobraz_tab('pr_1',0)">Příklad 1</button>
+  <button class="w3-bar-item w3-button" onclick="zobraz_tab('pr_2',1)">Příklad 2</button>
+</div>    
+
+<div id="pr_1" class="tabs">
+  <p>Podle analytické společnosti StatCounter je Chrome nejvíc používaným prohlížečem za leden 2018. Pojďme seřadit uvedené prohlížeče v tabulce podle grafu od nejpoužívanějšího po nejméně používaný. </p>
+  <div class="w3-row">
+    <div class="w3-third" id="pr1">
+    </div>
+    <div class="w3-twothird">
+      <img src="image/pr_prohlizece_statcounter.png" alt="graf_statcounter" />
+    </div>
+  </div>
+</div>  
+
+<div id="pr_2" class="tabs">
+  <p>Tady mám ještě nějaká vlastní data, která jsem si vymyslel. Dovedeš to správně seřadit?</p>
+  <div class="w3-row">
+    <div class="w3-third" id="pr2">
+    </div>
+    <div class="w3-twothird">
+      <div class="obal_table">
+        <canvas id="pr_graph"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+<script async="" src="script/prohlizece.js"></script>
+<div id="modal" class="w3-modal"></div>
+</body>
+</html>
