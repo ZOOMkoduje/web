@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>         
+  <meta charset="UTF-8">              
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/w3.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  <link href="image/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+                                                                                         
+  <script src="script/funkce.js"></script>  
+                                                                                             
+  <title>Odhad prodejů</title>      
+</head>
+<body class="w3-content">
+<header class="w3-container">                                   
+  <a href="https://pracesdaty.zcu.cz" ><img src="image/logo.png" alt="logo" /></a>
+  <p><strong>Kategorie:</strong> Porovnáváme a prezentujeme data</p>
+  <p><strong>Název příkladu:</strong> Odhad prodejů</p>
+  <noscript>
+    <div class="w3-panel no-js"><strong>Pozor!</strong> Ve svém prohlížeči máte vypnutý JavaScript. Bez jeho zapnutí stránky nebudou fungovat korektně.</div>
+  </noscript>
+</header>
+<main class="w3-container">
+<div id='kontejner'>
+        <div id='kontejner_select'>
+            <ol>
+                <li>
+                    <p>
+                    Nejprve si výběrem hodnoty ze seznamu zvol obtížnost (číselné 
+                    hodnoty v seznamu představují počet výsečí výsečového grafu)
+                    a potvrď výběr tlačítkem.
+                    </p>
+                </li>
+            </ol>
+            Počet značek mobilů:
+            <select id='select' style="width: 50px">
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10'>10</option>
+            </select>
+            
+            <button class='myButton' id='start'>Spustit</button>
+            <br>
+            <div id="nadpisGrafu">
+            <ol>
+                <li value="2">
+                    <h5>
+                    V legendě následujícího výsečového grafu odhadni správně
+                    procentuální zastoupení značek podle velikosti výsečí.
+                    </h5>
+                </li>
+            </ol>
+            <br>
+            <h3>Smyšlený procentuální podíl tržeb prodejců
+             mobilních a jiných elektronických zařízení</h3>
+            </div>
+            <br>
+            <div id='kontejner_platna2'>
+                
+                <canvas id='platno2' width="450" height="450"></canvas>
+                <fieldset  id='ramLegendy'>
+                  <legend id='legenda' for="platno2">Legenda grafu</legend>
+                  <div id='legenda2'></div>
+                  <button class='myButton' id='kontrola2'>Kontrola</button>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+<div id="modal" class="w3-modal"></div>
+</main>
+<script async="" src="script/odhad_prodeju.js"></script>
+
+</body>
+</html>
